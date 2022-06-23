@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:localization_in_flutter/routes/custom_router.dart';
+import 'package:localization_in_flutter/routes/route_names.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +17,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      onGenerateRoute: CustomRouter.allRoutes,
+      initialRoute: homeRoute,
     );
   }
 }
